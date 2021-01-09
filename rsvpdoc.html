@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="\css\wedute.css">
+   <link rel="stylesheet" href="\css\webstyle.css">
+   <link rel="stylesheet" href="\css\gallery.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+
+   
+   <title>Wedding Invitation</title>
+</head>
+
+<body class="bg-texture">
+   <div id="page-container">
+      <div id="content-wrap">
+         <!--Navbar-->
+         <div class="navbar">
+            <div class="container flex">
+               <h2 class="logo">Wedding | Karen & Chris</h2>
+               <nav>
+                  <ul>
+                     <li><a href="index.html">Invitation</a></li>
+                     <li><a href="rsvpdoc.html">RSVP Here</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+
+         <!-- HEAD -->
+         <section class="features-head bg-primary">
+            <div class="container grid">
+                  <h2 class="xl">R S V P</h2>
+            </div>
+         </section>
+
+         <!--Docs Main-->
+         <section class="docs-main my-4">
+            <div class="container grid-2">
+               <div class="showcase-form card1">
+                  <h2>Please fill form and send to RSVP</h2>
+                  <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                     <input type="hidden" name="form-name" value="contact">
+                     <p class="hidden">
+                        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                      </p>
+                     <div class="form-control">
+                        <input type="text" name="name" placeholder="Number of Attendees" required>
+                     </div>
+                     <div class="form-control">
+                        <input type="text" name="number" placeholder="Attendees Full Names" required>
+                     </div>
+                     <div class="form-control">
+                        <input type="text" name="PHnumber"" placeholder="Phone Number" required>
+                     </div>
+                     <div class="form-control">
+                        <input type="email" name="email" placeholder="Email" required>
+                     </div>
+                     <div class="form-control">
+                        <input type="message" name="email" placeholder="Optional: Message / Questions">
+                     </div>
+                        <input type="submit" value="Send" class="btn btn-primary">  <!--Send button -->
+                  </form>
+               </div>
+            
+
+               <div class="card3">
+                  <div class="img-slider">
+                     <div class="slide active">
+                     <img src="images/map1.png" alt="">
+                     <div class="info">
+                        <h2>Navigation</h2>
+                     </div>
+                     </div>
+                     <div class="slide">
+                        <img src="images/wed00.jpg" alt="">
+                        <div class="info">
+                        <h2>Braxmere</h2>
+                        </div>
+                     </div>
+                     <div class="slide">
+                     <img src="images/wed01.jpg" alt="">
+                     <div class="info">
+                        <h2>Entrance</h2>
+                     </div>
+                     </div>
+                     <div class="slide">
+                     <img src="images/wed02.jpg" alt="">
+                     <div class="info">
+                        <h2>Ceremony</h2>
+                     </div>
+                     </div>
+                     <div class="slide">
+                     <img src="images/wed03.jpeg" alt="">
+                     <div class="info">
+                        <h2>Lake Taupo</h2>
+                     </div>
+                     </div>
+                     <div class="slide">
+                     <img src="images/wed04.jpg" alt="">
+                     <div class="info">
+                        <h2>Bar and Food</h2>
+                     </div>
+                     </div>
+                     <div class="navigation">
+                     <div class="btn active"></div>
+                     <div class="btn"></div>
+                     <div class="btn"></div>
+                     <div class="btn"></div>
+                     <div class="btn"></div>
+                     <div class="btn"></div>
+                     </div>
+                  </div>
+
+                  <!-- Javascript -->
+         <script type="text/javascript">
+            var slides = document.querySelectorAll('.slide');
+            var btns = document.querySelectorAll('.btn');
+            let currentSlide = 1;
+      
+            // Javascript for image slider manual navigation
+            var manualNav = function(manual){
+            slides.forEach((slide) => {
+               slide.classList.remove('active');
+      
+               btns.forEach((btn) => {
+                  btn.classList.remove('active');
+               });
+            });
+      
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+            }
+      
+            btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+               manualNav(i);
+               currentSlide = i;
+            });
+            });
+      
+            // Javascript for image slider autoplay navigation
+            var repeat = function(activeClass){
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+      
+            var repeater = () => {
+               setTimeout(function(){
+                  [...active].forEach((activeSlide) => {
+                  activeSlide.classList.remove('active');
+                  });
+      
+               slides[i].classList.add('active');
+               btns[i].classList.add('active');
+               i++;
+      
+               if(slides.length == i){
+                  i = 0;
+               }
+               if(i >= slides.length){
+                  return;
+               }
+               repeater();
+            }, 7000);
+            }
+            repeater();
+            }
+            repeat();
+            </script>
+         <!-- JS END -->
+
+               </div>
+            </div>
+         </section>
+
+         </div>
+         <!-- Footer -->
+      <footer class="footer2 py-1">
+         <div class="container grid grid-3">
+            <div>
+               <h1><a href="https://webknight.co.nz/">WebKnight</a></h1>
+               <p>Copyright &copy; 2020</p>
+            </div>
+            <nav>
+               <ul>
+                  <li><a href="index.html">Invitation</a></li>
+                  <li><a href="rsvpdoc.html"> RSVP Here</a></li>
+               </ul>
+            </nav>
+         </div>
+      </footer>
+   </div>
+</body>
+</html>

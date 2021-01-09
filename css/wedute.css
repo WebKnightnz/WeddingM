@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Defining properties to use throughout code. :root = a scope */
+:root {
+   --primary-color: #047aed;
+   --card-color: hsla(30, 27%, 90%, 0.863);
+}
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+/* General use classes/utilities */
+
+.container {
+   max-width: 1400px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+.card1 {
+   background-color: var(--card-color);
+   border-radius: 10px;
+   box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.25);  /*Horizontal Shadow, Vertical shadow, blur size, colour*/
+   padding: 20px 30px 20px 30px;
+   margin: 20px;
+}
+
+.card2 {
+   background-color: var(--card-color);
+   border-radius: 10px;
+   box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.25);  /*Horizontal Shadow, Vertical shadow, blur size, colour*/
+   margin: 20px;
+   padding: 10px 20px 52px 20px;
+}
+
+.card3 {
+   background-color: var(--card-color);
+   border-radius: 10px;
+   box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.25);  /*Horizontal Shadow, Vertical shadow, blur size, colour*/
+   margin: 50px 7px 10px 7px;
+   border: #ceb9a5 solid px
+}
+
+.card4 {
+   background-color: var(--card-color);
+   border-radius: 10px;
+   box-shadow: 0px 7px 7px 0px rgba(0,0,0,0.25);  /*Horizontal Shadow, Vertical shadow, blur size, colour*/
+   padding: 30px;
+   margin: 20px;
+}
+
+.btn {
+   display: inline-block;
+   padding: 10px 30px;
+   cursor: pointer;  /* Sets the image of the mouse cursor to a 'pointer' hand. Many other options */
+   background: var(--primary-color);
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+}
+
+.btn-outline {
+   background-color: transparent;
+   border: 1px #fff solid;
+}
+
+.btn:hover {  /* Class button. Upon hover do { this stuff } */
+   border: saddlebrown 1px solid;
+   transform: scale(0.95)
+}
+
+/* Backgrounds and colored buttons */
+.bg-secondary, 
+.btn-secondary {
+   background-color: var(--secondary-color);
+   color: #fff;
+}
+
+.bg-dark, 
+.btn-dark {
+   background-color: var(--dark-color);
+   color: #fff;
+}
+
+.bg-foot,
+.btn-foot {
+   border-top: #ceb9a5 solid 3px;
+   border-radius: 2px;
+   background-color: var(--border-color);
+   color: #fff;
+}
+
+.bg-texture {
+   background-image: url(../images/textures/floraltexture.jpg);
+   background-size: cover;
+}
+
+.bg-primary {
+   /* Controls the top of page 'INFORMATION' and 'RSVP' */
+   /* The '..' means 'go back out of current folder' */
+   border-bottom: #ceb9a5 solid 3px;
+   background-color: var(--border-color);
+   background-size: cover;
+   color: #fff;
+}
+
+.bg-light, 
+.btn-light {
+   background-color: var(--light-color);
+   color: #333;
+}
+
+/* FOR LINKS */   
+/* THIS GIVES THE SOCIAL MEDIA LINKS AND HOME/FEAT/DOC */
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+   color: white;
+}
+
+/* TEXT COLORS --- FOR whatever link ur on in essentials */
+.text-primary, 
+.btn-primary {
+   background-color: var(--primary-color);
+}
+
+.text-secondary, 
+.btn-secondary {
+   color: var(--secondary-color);
+}
+
+.text-dark, 
+.btn-dark {
+   color: var(--dark-color);
+}
+
+.text-light, 
+.btn-light {
+   color: var(--light-color);
+}
+
+/* Text Sizes */
+.lead {                 /* lead = lead/priority paragraphs */
+   font-size: 20px;
+}
+
+.sm {
+   font-size: 1rem;
+}
+
+.md {
+   font-size: 2rem;
+}
+
+.lg {
+   font-size: 3rem;
+}
+
+.docs-main li {
+   font-size: 22px;
+   padding-bottom: 5px;
+   margin-bottom: 5px;
+}
+
+.text-center {
+   text-align: center;
+}
+
+/* Alert */
+.alert {
+   background-color: var(--light-color);
+   padding: 10px 20px;
+   margin: 15px 0;
+}
+
+.alert i {
+   margin-right: 10px;
+}
+
+.alert-success {
+   background-color: var(--success-color);
+   color: #fff;
+}
+
+.alert-error {
+   background-color: var(--error-color);
+   color: #fff;
+}
+
+.flex {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%; /* ie. 100% of container */
+}
+
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;  /*  */
+   gap: 30px;
+   justify-content: center;
+   align-content: flex-start;
+   align-items: center;
+   height: 100%;
+}
+
+.grid-2 {
+   grid-template-columns: 1fr;
+   justify-self: center;
+   align-self: center;
+}
+
+
+/* MARGINS */
+/* MARGIN TOP_BOTTOM */
+.my-1 {
+   margin: 1rem 0;
+}
+
+.my-2 {
+   margin: 1.5rem 0;
+}
+
+.my-3 {
+   margin: 2rem 0;
+}
+
+/* .stats .stats-heading{
+   margin-bottom: 30px;
+}  - - - SAME AS my-4 roughly USE CODE BELOW my-1 - - - */
+.my-4 {
+   margin: 3rem 0;
+}
+
+.my-5 {
+   margin: 4rem 0;
+}
+
+.my-6 {
+   margin: 8rem 0;
+}
+
+/* MARGIN ALL AROUND */
+
+.m-1 {
+   margin: 1rem;
+}
+
+.m-2 {
+   margin: 1.5rem;
+}
+
+.m-3 {
+   margin: 2rem;
+}
+
+.m-4 {
+   margin: 3rem;
+}
+
+.m-5 {
+   margin: 4rem;
+}
+
+/* PADDING */
+
+.py-1 {
+   padding:0;
+}
+
+.py-2 {
+   padding: 1.5rem 0;
+} 
+
+.py-3 {
+   padding: 2rem 0;
+}
+
+.py-4 {
+   padding: 3rem 0;
+}
+
+.py-5 {
+   padding: 4rem 0;
+}

@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Defining properties to use throughout code. :root = a scope */
+:root {
+   --card-color: hsla(30, 27%, 90%, 0.863);
+   --card-font: #1a4e02;
+   --primary-color: rgba(139, 29, 29, 0.699);
+   --secondary-color: #1c3fa8;
+   --dark-color: #4c2e25;
+   --light-color: #f4f4f4;
+   --success-color: #5cd85c;
+   --error-color: #d9534f;
+   --border-color: #934c47d8;
+}
+
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+html {
+   height: 100vh;
+}
+
+
+body {
+   font-family: 'Lato', sans-serif;
+   color: #333;
+   line-height: 1.6;
+}
+
+ul {
+   list-style-type: none;
+}
+
+a {
+   text-decoration: none;
+   color: #333;
+}
+
+h1, 
+h2 {
+   font-weight: 300;
+   line-height: 1.2;
+   margin: 10px 0;
+}
+
+p {
+   margin: 10px 0;
+}
+
+p1 {
+   font-style: italic;
+   font-size: 20px;
+}
+
+.hidden {
+   visibility: hidden;
+   height: 0;
+}
+
+img {
+   width: 100%; /* Setting this to 100% will prevent the image from exceeding its container */
+}
+
+code, 
+pre {
+   background-color: #333;
+   color: #fff;
+   padding: 10px;
+}
+
+.hidden {
+   visibility: hidden;
+   height: 0;
+}
+
+/*Navbar styling */
+
+.navbar {
+   /* Controls the wedding ... wedding info ... rsp bar*/
+   background-color: var(--border-color);
+   color: #fff;
+   height: 70px;
+}
+
+.navbar ul{
+   display: flex;
+}
+
+.navbar a{
+   font-size: 25px;
+   color: #fff;
+   padding: 10px;
+   margin: 0 5px;;
+}
+
+.navbar a:hover {
+   border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+   justify-content: space-between;
+}
+
+/* Card */
+.card {
+   color: var(--card-font);
+   background-color: var(--card-color);
+}
+
+.card1 {
+   background-color: var(--card-color);
+}
+
+.card2 {
+   background-color: var(--card-color);
+}
+
+/*Showcase */
+.showcase {
+   height: 400px;
+   background-color: var(--primary-color);
+   color: #fff;
+   position: relative;
+}
+
+.showcase h1 {
+   font-size: 40px;
+}
+
+.showcase p {
+   color: var(--card-font);
+   margin: 20px 0;
+}
+
+.showcase-text {
+   animation: slideInFromLeft 1s ease-in;
+}
+
+/* Contact */
+.showcase-form {
+   background-color: var(--card-color);
+   margin-left: 25%;
+   margin-right: 25%;
+   width: 50%;
+   padding: 20px 40px;
+   z-index: 100; /*Gives priority level to display on top. higher num = higher priority*/
+   animation: slideInFromTop 2s ease-in;
+}
+
+.showcase-form .form {
+   display: inline-block;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: left;
+}
+
+.showcase-form .form-control {
+   grid-template-columns: 1fr;
+   margin: 30px 0; 
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'],
+.showcase-form input[type='number'],
+.showcase-form input[type='message'] {
+   font-style: italic;
+   border: 0;
+   border-bottom: 1px solid #b4becb;
+   width: 100%;
+   padding: 3px;
+   font-size: 16px;
+}
+                              /* Focus meaning when clicked obviously */
+.showcase-form input:focus {  /* Takes care of box around inputs when clicked */
+   outline: none;
+}
+
+.showcase::before,  /* This is how we get a slant */
+.showcase::after{
+   content: 'Hello';
+   position: absolute;
+   height: 100px;
+   bottom: -70px;
+   right: 0;
+   left: 0;
+   background:white;
+   transform: skewY(-3deg);
+}
+
+
+
+/* Features */
+
+.features-head .grid {
+   margin-top: 0px;
+   margin-bottom: 0px;
+   grid-template-columns: 1fr;
+}
+
+.features-head .grid .xl {
+   margin-top: 0px;
+   margin-bottom: 20px;
+   font-size: 4em;
+   font-weight: bold;
+   text-decoration: 4px white;
+   grid-template-columns: 1fr;
+
+}
+
+.features-main .grid > *:first-child {
+   grid-column: 1 / span 3;
+   padding: 30px 0px 30px 50px;
+}
+
+.features-main .grid > *:nth-child(2) {
+   grid-column: 1 / span 2;
+}
+
+.page-container {
+   min-height: 100vh;
+   position: relative;
+}
+
+/* DOCS */
+
+.docs-main p,
+.docs-main p1,
+.docs-main li,
+.docs-main a {
+   font-size: 25px;
+   align-content: center;
+   justify-content: center;
+}
+
+.docs-main .grid {
+   max-width: 1400px;
+}
+
+
+.grid5 {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   margin-bottom: 50px;
+   max-width: 1400px;
+   justify-items: center;
+   gap: 30px;
+}
+
+.card5 {
+   border-radius: 15px;
+   margin: 20px;
+}
+
+.img-slider2 img {
+   border-radius: 15px;
+   height: 30vh;
+
+}
+
+.docs-main h3 {
+   font-style: italic;
+   font-size: 40px;
+   margin: 20px 0;
+}
+
+.docs-main ul {
+   margin-left: 25px;
+   padding-left: 5px;
+   padding-bottom: 7px;
+   list-style-type: disc;
+   font-size: 22px;
+}
+
+.docs-main li {
+   margin-bottom: 15px;
+}
+
+.docs-main nl {
+   list-style-position: outside;
+}
+
+.docs-main .grid {
+   grid-template-columns: 1fr 1fr;
+   align-items: flex-start; /*Pulls the 'essentials' card to top'*/
+}
+
+.docs-main nav li {
+   font-size: 17px;
+   padding-bottom: 5px;
+   margin-bottom: 5px;
+   border-bottom: 1px #ccc solid;
+}
+
+.docs-main a:hover {
+   font-weight: bold;
+   
+}
+
+/* FOOTER */
+
+.footer .social a,
+.footer2 .social a {
+   padding-left: 300px;
+   color: white;
+   margin: 0 10px;
+}
+
+.footer a,
+.footer2 a {
+   color: white;
+}
+
+.footer li, 
+.footer2 li {
+   padding-bottom: 10px;
+}
+
+/* Animations */
+@keyframes slideInFromLeft {
+   0% {
+      transform: translateX(-100%);
+   }
+
+   100% {
+      transform: translateX(0)
+   }
+}
+
+/* Moving Slides slide animation dynamic */
+@keyframes slideInFromRight {
+   0% {
+      transform: translateX(100%);
+   }
+
+   100% {
+      transform: translateX(0)
+   }
+}
+
+@keyframes slideInFromTop {
+   0% {
+      transform: translateY(-100%);
+   }
+   100% {
+      transform: translateX(0)
+   }
+}
+
+@keyframes slideInFromBottom {
+   0% {
+      transform: translateY(100%);
+   }
+   100% {
+      transform: translateX(0)
+   }
+}
+
+.page-container {
+   min-height: 100vh;
+   position: relative;
+}
+
+.content-wrap {
+   padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.grid-3 {
+   padding-top: 20px;
+   padding-bottom: 20px;
+}
+    
+.footer {
+   border-top: #ceb9a5 solid 3px;
+   border-radius: 2px;
+   background-color: var(--border-color);
+   color: #fff;
+   position: relative;
+   width: 100%;       /* Footer height */
+}
+
+.footer2 {
+   border-top: #ceb9a5 solid 3px;
+   border-radius: 2px;
+   background-color: var(--border-color);
+   color: #fff;
+   position: relative;
+   width: 100%;
+   height: auto;        /* Footer height */
+}
+
+
+/* MEDIA QUERY RESPONSIVENESS */
+
+/* Tablets and Under */
+/* Means anything under 899px */
+
+@media(max-width: 899px) {
+
+   .grid5 {
+      grid-template-columns: 1fr;
+   }
+
+   /* RSVP PAGE */
+
+   /* INVITE PAGE */
+
+   .page-container {
+      position: relative;
+      min-height: 100vh;
+   }
+
+   .content-wrap {
+      padding-bottom: 2.5rem;    /* Footer height */
+   }
+    
+   .footer {
+      border-top: #ceb9a5 solid 3px;
+      border-radius: 2px;
+      background-color: var(--border-color);
+      color: #fff;
+      position: relative;
+      width: 100%;
+      height: auto;        /* Footer height */
+   }
+   .footer2 {
+      border-top: #ceb9a5 solid 3px;
+      border-radius: 2px;
+      background-color: var(--border-color);
+      color: #fff;
+      position: relative;
+      width: 100%;
+      height: auto;        /* Footer height */
+   }
+ 
+   .showcase-form {
+      margin-left: 3%;
+      margin-right: 3%;
+      width: 94%;
+   }
+  
+   .navbar {
+      height: 110px;
+   }
+
+   .navbar .flex{ /*navbar is utilizing flexbox and uses row by default*/
+      flex-direction: column;
+      overflow: hidden;
+   }
+
+   .navbar ul {
+      padding: 10px;
+      background-color: rgba(0,0,0,0.1);
+   }
+
+   .grid,
+   .features-head .grid .xl {
+      font-size: 50px;
+      padding: 10px;
+      grid-template-columns: 1fr;
+      justify-self: center;
+      align-self: center;
+   }
+
+   .docs-main .grid {
+      grid-template-columns: 1fr;
+      justify-self: center;
+      align-self: center;
+   }
+
+   .showcase-form {
+      height:auto;
+   }
+
+   .showcase-text {
+      text-align: center;
+   }
+
+   .footer h1 {
+      font-size: 50px;
+   }
+
+   .footer p {
+      font-size: 16px;
+   }
+
+   .footer li {
+      font-size: 30px;
+   }
+
+   .footer2 h1 {
+      font-size: 50px;
+   }
+
+   .footer2 p {
+      font-size: 16px;
+   }
+
+   .footer2 li {
+      font-size: 30px;
+   }
+      
+
+}
+
+/* Mobile */
+/* Means anything under 500px */
+@media(max-width: 620px) {
+
+   .container {
+      padding: 0px;
+   }
+
+   .page-container {
+      position: relative;
+      min-height: 100vh;
+   }
+
+   .content-wrap {
+      padding-bottom: 2.5rem;    /* Footer height */
+   }
+    
+   .footer {
+      font-size: 15px;
+      border-top: #ceb9a5 solid 3px;
+      border-radius: 2px;
+      background-color: var(--border-color);
+      color: #fff;
+      position: relative;
+      width: 100%;
+      height: auto;        /* Footer height */
+      margin-bottom: 20px;
+   }
+
+   .footer2 {
+      font-size: 15px;
+      border-top: #ceb9a5 solid 3px;
+      border-radius: 2px;
+      background-color: var(--border-color);
+      color: #fff;
+      position: relative;
+      width: 100%;
+      height: auto;        /* Footer height */
+      margin-bottom: 20px;
+   }
+
+   .docs-main .grid p, 
+   .docs-main .grid li,
+   .docs-main .grid a {
+      font-size: 20px;
+   }
+
+   .docs-main .card1,
+   .docs-main .card2 {
+      padding: 10px 20px 10px 20px;
+
+   }
+
+   .navbar {
+      height: 110px;
+   }
+
+   .navbar .flex{ /*navbar is utilizing flexbox and uses row by default*/
+      flex-direction: column;
+   }
+
+
+   .navbar ul {
+      padding: 10px;
+      background-color: rgba(0,0,0,0.1);
+   }
+
+   .grid,
+   .features-head .grid .xl {
+      font-size: 40px;
+      padding: 10px;
+      grid-template-columns: 1fr;
+      justify-self: center;
+      align-self: center;
+   }
+
+   .footer h1 {
+      font-size: 35px;
+   }
+
+   .footer p {
+      font-size: 15px;
+   }
+
+   .footer li {
+      font-size: 23px;
+   }
+
+   .footer2 h1 {
+      font-size: 35px;
+   }
+
+   .footer2 p {
+      font-size: 15px;
+   }
+
+   .footer2 li {
+      font-size: 23px;
+   }
+}
